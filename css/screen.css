@@ -74,7 +74,7 @@ h3 {
 }
 
 h1 {
-  font-style: 36px;
+  font-size: 36px;
   line-height: 40px;
   margin: 0 0 24px;
   font-family: 'Playfair Display', serif;
@@ -172,6 +172,10 @@ a:active {
 /* Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 576px) {
+  .c-article__title {
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -181,8 +185,8 @@ a:active {
     /* padding: 48px 48px 24px; */
   }
   h1 {
-    font-size: 58px;
-    line-height: 64px;
+    font-size: 42px;
+    line-height: 50px;
   }
   .c-article__header {
     padding: 48px 48px 24px;
@@ -214,6 +218,11 @@ a:active {
   .c-article__content {
     width: 75%;
   }
+
+  .c-article__title {
+    font-size: 64px;
+    line-height: 72px;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -222,12 +231,84 @@ a:active {
 }
 
 /*
+    Components: Author
+*/
+.c-author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.c-author__image {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
+
+.c-author__name,
+.c-author__meta {
+  margin-bottom: 0;
+}
+
+.c-author__meta {
+  font-size: 14px;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, arial, sans-serif;
+  line-height: 24px;
+}
+
+.c-author__name {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/*
+      Components: Article
+  */
+.c-article__header,
+.c-article__body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.c-article__header {
+  padding: 24px 24px 0;
+}
+
+.c-article__body {
+  padding: 0 24px;
+}
+
+.c-article__blockquote {
+  font-family: 'Driod Serif';
+  font-size: 23px;
+  font-style: italic;
+  color: #00b37d;
+  background-color: #f2faf8;
+  line-height: 32px;
+}
+
+/*
+      Utilities: max-width
+      ---
+      Utility classes to put specific max widths onto elements.
+  */
+
+.u-max-width-sm {
+  max-width: 36em;
+}
+
+.c-article__date {
+  color: #5c6366;
+  font-family: 'Driod Serif';
+}
+
+/*
     Print styles.
     ---
     Inlined to avoid the additional HTTP request:
     http://www.phpied.com/delay-loading-your-print-css/
 */
-
 @media print {
   *,
   *:before,
@@ -286,63 +367,4 @@ a:active {
   h3 {
     page-break-after: avoid;
   }
-}
-
-/*
-    Components: Author
-*/
-.c-author {
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
-  gap: 16px;
-}
-
-.c-author__image {
-  width: 56px;
-  height: 56px;
-  border-radius: 100%;
-}
-
-.c-author__name,
-.c-author__meta {
-  margin-bottom: 0;
-}
-
-.c-author__meta {
-  font-size: 14px;
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, arial, sans-serif;
-  line-height: 24px;
-}
-
-.c-author__name {
-  font-size: 16px;
-  line-height: 24px;
-}
-
-/*
-    Components: Article
-*/
-.c-article__header,
-.c-article__body {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.c-article__header {
-  padding: 24px 24px 0;
-}
-
-.c-article__body {
-  padding: 0 24px;
-}
-
-/*
-    Utilities: max-width
-    ---
-    Utility classes to put specific max widths onto elements.
-*/
-
-.u-max-width-sm {
-  max-width: 36em;
 }
