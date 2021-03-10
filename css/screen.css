@@ -71,6 +71,13 @@ h3 {
   font-family: 'Inter Web', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
+h1{
+    font-style: 36px;
+    line-height: 40px;
+    margin: 0 0 24px;
+    font-family: "Playfair Display", serif;
+}
+
 h2 {
   font-size: 23px;
   line-height: 32px;
