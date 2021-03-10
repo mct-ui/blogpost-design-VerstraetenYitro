@@ -124,6 +124,7 @@ a {
   transition: all 0.1s ease-in-out;
 }
 
+/*LoVe before Hate Always*/
 a:visited,
 a:active {
   color: #00e6a1;
